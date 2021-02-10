@@ -30,7 +30,7 @@ try {
     /**
      * Generate a path to env file
      */
-    const envFilePath = path.join('/github/workspace', directory, file_name);
+    const envFilePath = path.join(directory, file_name);
 
     /**
      * Open a write stream to file
