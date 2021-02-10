@@ -1,0 +1,22 @@
+name: 'Create env file'
+description: 'Simple action for creating environment file'
+branding:
+  icon: 'file'
+  color: 'blue'
+
+inputs:
+  file_name:
+    description: 'Env file name'
+    default: '.env'
+
+  directory:
+    description: 'Directory for env file'
+    default: ''
+
+  key_start:
+    description: 'Identifier for valid keys'
+    default: 'envkey_'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
