@@ -10,19 +10,19 @@ Simple action for creating environment file.
 
 Env file name  
 
-`.env` by default
+`.env` by default.
 
 ### `directory`
 
 Directory for env file
 
-`` project's root directory be default
+Project's root directory be default.
 
-### `key_start`
+### `key_prefix`
 
 Identifier for valid keys. Keys which starts with this identifier will be loaded.
 
-`envkey_` be default
+`envkey_` be default.
 
 ## Usage
 
@@ -48,5 +48,5 @@ Or extended mode:
     some_other_variable_which_will_be_skipped: foobar
     directory: <directory_name>
     file_name: .env
-    key_start: envkey_
+    key_prefix: envkey_
 ```

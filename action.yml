@@ -1,4 +1,4 @@
-name: 'Create env file'
+name: 'Create env file with secrets'
 description: 'Simple action for creating environment file'
 branding:
   icon: 'file'
@@ -13,7 +13,7 @@ inputs:
     description: 'Directory for env file'
     default: ''
 
-  key_start:
+  key_prefix:
     description: 'Identifier for valid keys'
     default: 'envkey_'
 

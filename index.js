@@ -10,7 +10,7 @@ const env = process.env;
 try {
     const file_name = core.getInput('file_name') || '.env';
     const directory = core.getInput('directory') || '';
-    const KEY_START = core.getInput('key_start') || 'envkey_';
+    const key_prefix = core.getInput('key_prefix') || 'envkey_';
 
     /**
      * Get an array of array pair (key, value) for valid env variables
@@ -19,7 +19,7 @@ try {
     const validVars = Object.entries(env).filter(variable => {
         let name = variable[0];
 
-        return name.startsWith(KEY_START);
+        return name.startsWith(key_prefix);
     })
 
     /**
@@ -45,7 +45,7 @@ try {
          * For each valid variable we create a line
          */
         validVars.forEach(variable => {
-            let name = variable[0];
+            let name = variable[0].substring(key_prefix.length);
             let value = variable[1];
 
             stream.write(`${name}=${value}\n`);
